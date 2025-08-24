@@ -21,6 +21,8 @@ return {
                     local c = vim.lsp.get_client_by_id(args.data.client_id)
                     if not c then return end
 
+                    vim.cmd("setlocal spell")
+
                     if vim.bo.filetype == "lua" then
                         -- Format the current buffer on save
                         vim.api.nvim_create_autocmd('BufWritePre', {
