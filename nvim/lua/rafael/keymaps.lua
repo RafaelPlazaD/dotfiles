@@ -38,8 +38,20 @@ vim.keymap.set("n", "<leader>fk", "<CMD>bn<CR>")
 --open clean buffer
 vim.keymap.set("n", "<leader>fc", "<CMD>vnew<CR>")
 
+--ortografia
+vim.keymap.set("n", "<leader>i", 'z=', {
+    noremap = true,
+    silent  = true,
+    desc    = "Mostrar sugerencias de ortografía"
+})
+
+-- some remapeos
+vim.keymap.set("n", "f", "$", {
+    noremap = true,
+    desc = "go to end of the line"
+})
 --create a new file
-vim.keymap.set("n", "<leader>e", ":e")
+--vim.keymap.set("n", "<leader>e", ":e")
 
 -- Open Explore
-vim.keymap.set("n", "<leader>fe", "<CMD>Explore<CR>")
+--vim.keymap.set("n", "<leader>fe", "<CMD>Explore<CR>")
